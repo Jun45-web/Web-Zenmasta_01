@@ -1,59 +1,191 @@
+/* Gaya dasar */
 body {
-    font-family: Arial, sans-serif;
-    background-color: #1f1f1f;
+    font-family: 'Poppins', sans-serif;
+    background: linear-gradient(to bottom, #1f1f1f, #111);
     color: white;
     margin: 0;
     padding: 0;
+    overflow-x: hidden;
 }
 
+/* Kontainer utama */
 .container {
-    max-width: 400px;
-    margin: 0 auto;
+    max-width: 450px;
+    margin: 50px auto;
     padding: 20px;
     text-align: center;
+    border-radius: 15px;
+    background: rgba(255, 255, 255, 0.1);
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.3);
+    backdrop-filter: blur(10px);
 }
 
-h1 {
-    font-size: 1.5em;
-    margin-bottom: 10px;
+/* Header */
+.header h1 {
+    font-size: 1.8em;
     color: #00ffcc;
+    margin-bottom: 10px;
+    animation: fadeInDown 1s ease-in-out;
 }
 
-p {
+.subtext {
     font-size: 0.9em;
     margin-bottom: 20px;
+    color: #bbb;
 }
 
+.divider {
+    height: 2px;
+    background: linear-gradient(to right, #00ffcc, #1da851);
+    margin: 10px auto 20px;
+    width: 60%;
+    animation: slideIn 1s ease-in-out;
+}
+
+/* Tombol */
 .button-container {
     display: flex;
     flex-direction: column;
-    gap: 10px;
+    gap: 15px;
 }
 
 .button {
     display: block;
-    padding: 10px 15px;
+    padding: 15px 20px;
     text-decoration: none;
-    font-size: 0.9em;
+    font-size: 1em;
+    font-weight: bold;
     color: white;
-    border: 1px solid #00ffcc;
-    border-radius: 5px;
-    background-color: #333;
+    border-radius: 25px;
     text-align: center;
-    transition: background-color 0.3s ease;
+    transition: transform 0.3s, box-shadow 0.3s;
 }
 
-.button:hover {
-    background-color: #00ffcc;
-    color: black;
-}
-
+/* Tombol WhatsApp */
 .button.whatsapp {
     background-color: #25d366;
-    color: white;
-    border: none;
+    box-shadow: 0 5px 10px rgba(37, 211, 102, 0.4);
 }
 
 .button.whatsapp:hover {
-    background-color: #1da851;
+    transform: scale(1.05);
+    box-shadow: 0 8px 15px rgba(37, 211, 102, 0.6);
+}
+
+/* Tombol Gradient */
+.button.gradient {
+    background: linear-gradient(to right, #00c6ff, #0072ff);
+    box-shadow: 0 5px 15px rgba(0, 114, 255, 0.4);
+}
+
+.button.gradient:hover {
+    transform: scale(1.05);
+    box-shadow: 0 8px 20px rgba(0, 114, 255, 0.6);
+}
+
+/* Footer */
+footer {
+    margin-top: 20px;
+    font-size: 0.8em;
+    color: #aaa;
+    text-align: center;
+}
+
+/* Animasi */
+@keyframes fadeInDown {
+    from {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes slideIn {
+    from {
+        width: 0;
+    }
+    to {
+        width: 60%;
+    }
+}
+.animated-image img {
+    width: 150px;
+    height: 150px;
+    border-radius: 10px;
+    animation: float 3s ease-in-out infinite;
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2);
+}
+
+/* Keyframes untuk animasi melayang */
+@keyframes float {
+    0% {
+        transform: translateY(0px);
+    }
+    50% {
+        transform: translateY(-20px);
+    }
+    100% {
+        transform: translateY(0px);
+    }
+}
+
+.social-media {
+    margin-top: 30px;
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+
+.social-media .icon {
+    text-decoration: none;
+    font-size: 1.2em;
+    font-weight: bold;
+    padding: 10px 20px;
+    border-radius: 10px;
+    color: white;
+    transition: all 0.3s ease;
+}
+
+.icon.facebook {
+    background-color: #4267B2;
+}
+
+.icon.twitter {
+    background-color: #1DA1F2;
+}
+
+.icon.instagram {
+    background: radial-gradient(circle at 30% 107%, #fdf497 0%, #fdf497 5%, #fd5949 45%, #d6249f 60%, #285AEB 90%);
+}
+
+.icon:hover {
+    transform: scale(1.1);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+}
+.gallery {
+    margin-top: 30px;
+    text-align: center;
+    color: #fff;
+}
+
+.gallery .images {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    margin-top: 10px;
+}
+
+.gallery img {
+    width: 150px;
+    height: 150px;
+    border-radius: 10px;
+    transition: transform 0.3s ease;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+}
+
+.gallery img:hover {
+    transform: scale(1.1);
 }
