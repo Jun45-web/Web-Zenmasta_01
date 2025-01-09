@@ -1,50 +1,151 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="id">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Rekber - Jasapost - Top Up</title>
-    <link rel="stylesheet" href="style.css">
+    <title>Website Resmi Zenmasta</title>
+    <style>
+        /* Reset CSS */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        /* Background Animasi */
+        body {
+            font-family: 'Arial', sans-serif;
+            background: linear-gradient(115deg, #0d1b2a, #1b263b);
+            overflow: hidden;
+            color: #fff;
+            text-align: center;
+            position: relative;
+            min-height: 100vh;
+        }
+
+        body::before, body::after {
+            content: '';
+            position: absolute;
+            width: 200%;
+            height: 200%;
+            background: radial-gradient(circle, rgba(0, 255, 255, 0.1), transparent);
+            animation: rotate 10s infinite linear;
+            z-index: -1;
+        }
+
+        body::after {
+            animation-direction: reverse;
+        }
+
+        @keyframes rotate {
+            0% { transform: rotate(0deg); }
+            100% { transform: rotate(360deg); }
+        }
+
+        /* Heading Utama */
+        h1 {
+            font-size: 3rem;
+            margin-top: 50px;
+            text-transform: uppercase;
+            background: linear-gradient(90deg, #00d4ff, #00ff7f);
+            -webkit-background-clip: text;
+            color: transparent;
+            animation: glow 1.5s infinite alternate;
+        }
+
+        @keyframes glow {
+            0% { text-shadow: 0 0 10px #00d4ff, 0 0 20px #00ff7f; }
+            100% { text-shadow: 0 0 20px #00d4ff, 0 0 40px #00ff7f; }
+        }
+
+        /* Tombol */
+        .button-container {
+            margin-top: 30px;
+        }
+
+        .button {
+            display: inline-block;
+            margin: 15px;
+            padding: 15px 30px;
+            font-size: 1.2rem;
+            color: #fff;
+            text-decoration: none;
+            text-transform: uppercase;
+            border: 2px solid transparent;
+            border-radius: 30px;
+            background: linear-gradient(90deg, #00d4ff, #00ff7f);
+            background-size: 200%;
+            transition: 0.3s;
+            box-shadow: 0 0 15px rgba(0, 255, 255, 0.5);
+        }
+
+        .button:hover {
+            background-position: right;
+            box-shadow: 0 0 25px rgba(0, 255, 255, 0.8);
+            transform: scale(1.1);
+        }
+
+        /* Video Container */
+        .video-container {
+            margin-top: 40px;
+        }
+
+        .video-container video {
+            border: 5px solid rgba(0, 255, 255, 0.5);
+            border-radius: 20px;
+            box-shadow: 0 0 20px rgba(0, 255, 255, 0.5);
+            transition: transform 0.3s ease;
+        }
+
+        .video-container video:hover {
+            transform: scale(1.05);
+        }
+
+        /* Animasi Partikel */
+        .particle {
+            position: absolute;
+            width: 10px;
+            height: 10px;
+            background: rgba(0, 255, 255, 0.7);
+            border-radius: 50%;
+            animation: float 5s infinite ease-in-out;
+        }
+
+        @keyframes float {
+            0% {
+                transform: translateY(0);
+                opacity: 1;
+            }
+            100% {
+                transform: translateY(-100px);
+                opacity: 0;
+            }
+        }
+
+        .particle:nth-child(odd) { animation-duration: 6s; }
+        .particle:nth-child(even) { animation-duration: 4s; }
+    </style>
 </head>
 <body>
-    <div class="container">
-        <!-- Header dengan hiasan modern -->
-        <div class="header">
-            <h1>WEBSITE RESMI ZENMASTA_01</h1>
-            <p class="subtext">Website Sederhana Ini Hasil Dari <b>"html dan css"</b>.</p>
-            <div class="divider"></div>
-        </div>
-
-        <!-- Tombol dengan animasi -->
-        <div class="button-container">
-            <a href="https://saweria.co/Zenmasta" class="button whatsapp">Support Saya Di Sini</a>
-     
-            <a href="https://discord.gg/MaBFhd3z" class="button gradient">Link Dc Saya [Shere Meppingan]</a>
-            <a href="https://www.youtube.com/@Zen-a2f" class="button whatsapp">YOUTUBE SAYA [SHERE MEPPINGAN]</a>
-            <a href="tiktok.com/@zenmasta_01" class="button gradient">TIKTOK REAL SAYA</a>
-            
-        </div>
-        <div class="animated-image">
-    <img src="IMG_20241211_220236.png" alt="Animasi" />
-</div>
-
-    <!-- Footer dengan efek modern -->
-    <footer>
-        <p>© 2024  - Website Daftar Link Resmi Saya</p>
-    </footer>
-    
-    <div class="social-media">
-    <a href="https://www.facebook.com" target="_blank" class="icon facebook">Facebook</a>
-    <a href="https://www.twitter.com" target="_blank" class="icon twitter">Twitter</a>
-    <a href="https://www.instagram.com" target="_blank" class="icon instagram">Instagram</a>
-</div>
-<div class="gallery">
-    <h3>GAME YANG GUA MAINKAN</h3>
-    <div class="images">
-        <img src="IMG_20241211_223858.jpg" alt="Gambar 1" />
-        <img src="IMG_20241212_065139.jpg" alt="Gambar 2" />
-        <img src="super_resolution_20241211223912435.jpg" alt="Gambar 3" />
+    <h1>Website Resmi Zenmasta_01</h1>
+    <div class="button-container">
+        <a href="https://saweria.co/Zenmasta" class="button">Support Saya Di Sini</a>
+        <a href="https://discord.gg/52YXC9q6" class="button">DC Komunity Gua</a>
+        <a href="https://youtube.com/@zen-a2f?si=UQm1EDOg58kJl1dw" class="button">YouTube Gua</a>
+        <a href="https://www.tiktok.com/@zenmasta_01?_t=ZS-8sv0XY0EsAp&_r=1" class="button">Tiktok Real Gua</a>
     </div>
-</div>
+    <div class="video-container">
+        <video controls loop muted="" width="320">
+            <source src="Intro.mp4" type="video/mp4">
+            Video tidak didukung browser Anda.
+        </video>
+    </div>
+
+    <!-- Partikel Animasi -->
+    <div class="particle" style="top: 10%; left: 20%;"></div>
+    <div class="particle" style="top: 30%; left: 40%;"></div>
+    <div class="particle" style="top: 50%; left: 60%;"></div>
+    <div class="particle" style="top: 70%; left: 80%;"></div>
+    <div class="particle" style="top: 90%; left: 30%;"></div>
 </body>
 </html>
